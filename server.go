@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"go_baby_steps/handlers"
-	"go_baby_steps/store"
+	"github.com/georgesaitis/go_baby_steps/handlers"
+	"github.com/georgesaitis/go_baby_steps/store"
 
 	"github.com/gorilla/mux"
 )

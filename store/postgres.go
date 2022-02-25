@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"go_baby_steps/errors"
-	"go_baby_steps/objects"
+	"github.com/georgesaitis/go_baby_steps/errors"
+	"github.com/georgesaitis/go_baby_steps/objects"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

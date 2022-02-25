@@ -3,7 +3,7 @@ package store
 import (
 	"context"
 	"fmt"
-	"go_baby_steps/objects"
+	"github.com/georgesaitis/go_baby_steps/objects"
 	"math/rand"
 	"time"
 )
