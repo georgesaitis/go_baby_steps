@@ -26,7 +26,7 @@ func WriteError(w http.ResponseWriter, err error) {
 		log.Println(err)
 		res = errors.ErrInternal
 	}
-	WriteResponse(w, res)
+	WriteResponse(w, &objects.ErrorResponseWrapper{Code: res.StatusCode(), Message: res.Message})
 }
 
 func IntFromString(w http.ResponseWriter, v string) (int, error) {

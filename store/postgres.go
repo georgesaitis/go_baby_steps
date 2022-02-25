@@ -111,7 +111,7 @@ func (p *pg) Cancel(ctx context.Context, in *objects.CancelRequest) error {
 func (p *pg) Reschedule(ctx context.Context, in *objects.RescheduleRequest) error {
 	evt := &objects.Event{
 		ID:            in.ID,
-		Slot:          in.NewSlot,
+		// Slot:          in.NewSlot,
 		Status:        objects.Rescheduled,
 		RescheduledOn: p.db.NowFunc(),
 	}

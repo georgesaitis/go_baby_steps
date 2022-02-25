@@ -33,7 +33,7 @@ type Event struct {
 	PhoneNumber string `json:"phone_number,omitempty"`
 
 	// Event slot duration
-	Slot *TimeSlot `gorm:"embedded" json:"slot,omitempty"`
+	// Slot *TimeSlot `gorm:"embedded" json:"slot,omitempty"`
 
 	// Change status
 	Status EventStatus `json:"status,omitempty"`

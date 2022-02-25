@@ -7,7 +7,7 @@ import (
 
 func main() {
 	args := Args{
-		conn: "postgres://postgres:@localhost:5432/baby_steps_go?sslmode=disable",
+		conn: "postgres://postgres:1234@localhost:5432/baby_steps_go?sslmode=disable",
 		port: ":8080",
 	}
 	if conn := os.Getenv("DB_CONN"); conn != "" {

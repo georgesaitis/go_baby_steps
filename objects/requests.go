@@ -59,13 +59,36 @@ type EventResponseWrapper struct {
 	Code   int      `json:"-"`
 }
 
+// ErrorResponseWrapper reponse of any Event request
+type ErrorResponseWrapper struct {
+	Code   int      `json:"-"`
+	Message string  `json:"message,omitempty"`
+}
+
 // JSON convert EventResponseWrapper in json
-func (e *EventResponseWrapper) JSON() []byte {
+func (e *ErrorResponseWrapper) Json() []byte {
 	if e == nil {
 		return []byte("{}")
 	}
 	res, _ := json.Marshal(e)
 	return res
+}
+
+// JSON convert EventResponseWrapper in json
+func (e *EventResponseWrapper) Json() []byte {
+	if e == nil {
+		return []byte("{}")
+	}
+	res, _ := json.Marshal(e)
+	return res
+}
+
+// StatusCode return status code
+func (e *ErrorResponseWrapper) StatusCode() int {
+	if e == nil || e.Code == 0 {
+		return http.StatusOK
+	}
+	return e.Code
 }
 
 // StatusCode return status code
